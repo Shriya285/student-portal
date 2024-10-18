@@ -1,6 +1,7 @@
 import React, { Component } from "react";
-import { Icon, Layout } from "antd";
+import { Layout } from "antd";
 import { Switch, Route } from "react-router-dom";
+import { CopyrightOutlined } from '@ant-design/icons';
 
 import "./App.css";
 import StudentHome from "./components/Student/Home/StudentHome";
@@ -8,7 +9,7 @@ import WrappedNormalLoginForm from "./components/Login/Login";
 import AttendancePage from "./components/Student/AttendancePage/AttendancePage";
 import Header from "./components/UI Components/Header/Header";
 
-import "antd/dist/antd.css"; // or 'antd/dist/antd.less'
+import 'antd/dist/reset.css';
 import Classes from "./index.module.css";
 import Error404 from "./components/Error404/Error404";
 import AssignmentHome from "./components/Student/Assignment/AssignmentHome";
@@ -53,7 +54,7 @@ class App extends Component {
           <Route component={Error404} />
         </Switch>
         <Layout.Footer className={Classes.footer}>
-          <Icon type="copyright" theme="twoTone" />
+          <CopyrightOutlined />
           &nbsp;Axios
         </Layout.Footer>
       </>
